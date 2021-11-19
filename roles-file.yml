@@ -2,6 +2,6 @@
 - hosts: localhost
   remote_user: root
   roles:
-    - ec2-server
+    - ec2-spin-up
     - apache-server
     - tomcat-server
