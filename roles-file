@@ -1,3 +1,4 @@
+---
 - name: Provision an EC2 Instance-installapache-installtomcat
     hosts: localhost
     remote_user: root
