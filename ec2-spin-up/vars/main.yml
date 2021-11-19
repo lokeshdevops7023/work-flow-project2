@@ -1,0 +1,9 @@
+---
+# vars file for ec2-spin-up
+      instance_type: t2.micro
+      security_group: webservers
+      image: ami-0d718c3d715cec4a7
+      region: us-east-2
+      keypair: AnsibleTowerTest
+      count: 1
+
