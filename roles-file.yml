@@ -4,4 +4,6 @@
   roles:
     - ec2-spin-up
     - apache-server
+      become: yes
     - tomcat-server
+      become: yes
