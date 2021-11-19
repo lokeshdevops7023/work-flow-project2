@@ -1,0 +1,7 @@
+---
+# vars file for apache-server
+
+      packages:
+      - httpd
+      - httpd-tools
+      - nginx
