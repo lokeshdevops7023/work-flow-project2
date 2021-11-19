@@ -1,7 +1,5 @@
 ---
 # tasks file for apache-server
-
-  - name: Install a list of packages with a list variable
-    yum:
-      name: "{{ packages }}"
-      state: latest
+ 
+- name: Install Apache
+    yum: pkg=httpd state=latest
