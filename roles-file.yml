@@ -1,8 +1,7 @@
 ---
-- name: Provision an EC2 Instance-installapache-installtomcat
-    remote_user: root
-    connection: local
-    roles:
-      - ec2-spin-up
-      - apache-server
-      - tomcat-server
+- hosts: localhost
+  remote_user: root
+  roles:
+    - ec2-server
+    - apache-server
+    - tomcat-server
