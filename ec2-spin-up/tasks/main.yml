@@ -50,7 +50,7 @@
       
 
       - name: local host web application |  
-         local_action: 
+        local_action: 
          module: ec2 
          region: us-east-2
          group : webservers 
