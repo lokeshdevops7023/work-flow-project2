@@ -47,3 +47,33 @@
             Name: Test-Server
             Owner: lokeshSai
             PurPose: Testing EC2 Instance From Ansible
+      
+
+      - name: local host web application |  
+        local_action: 
+        module: ec2 
+        region: us-east-2
+        group : webservers 
+        keypair: AnsibleTowerTest
+        instance_type: t2.micro
+        user_data: |  
+                               #!/bin/bash 
+                               yum install update -y 
+                               yum install httpd -y 
+                               service enable httpd
+                               service start httpd
+                               service status httpd
+                               yum -y install java
+                               java -version
+                               yum install wget unzip zip tar -y 
+                               mkdir /opt/tomcat/
+                               cd /opt/tomcat/
+                               tar -xvzf https://downloads.apache.org/tomcat/tomcat-8/v8.5.73/bin/apache-tomcat-8.5.73.zip.sha512
+                               mv apache-tomcat-8.5.73.zip.sha512 /opt/tomcat/tomcat8
+                               cd /opt/tomcat/tomcat8/bin/
+                               sh /opt/tomcat/tomcat8/bin/catalina.sh : sh /opt/tomcat/tomcat8/bin/startup.sh
+                               service status tomcat
+                               
+        image: ami-0d718c3d715cec4a7
+        vpc_subnet_id: subnet-077a2529660ce9370
+        assign_public_ip: True
