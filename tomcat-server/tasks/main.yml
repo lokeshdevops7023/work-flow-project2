@@ -4,7 +4,7 @@
     - name: Install Java
       yum:
         name: java-1.8.0-openjdk
-        state: present
+        state: latest
     - name: add tomcatuser
       user:
         name: tomcat
