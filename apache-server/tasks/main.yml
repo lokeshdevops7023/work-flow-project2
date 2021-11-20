@@ -5,6 +5,5 @@
   yum: name=* state=latest
    
 - name: Install Apache.
-  yum:
-    name: name=httpd state=latest
-
+  yum: name=nginx state=latest
+    
