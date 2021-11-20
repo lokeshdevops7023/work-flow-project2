@@ -8,10 +8,3 @@
   yum:
     name: name=httpd state=latest
 
-
-- name: Ensure Apache started
-  service:
-    name= httpd
-    state= restarted
-    enabled= true
- 
