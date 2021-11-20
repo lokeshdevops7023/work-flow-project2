@@ -6,14 +6,12 @@
    
 - name: Install Apache.
   yum:
-    name:
-      - httpd
-      - httpd-devel
-    state: present
+    name: name=httpd state=latest
+
 
 - name: Ensure Apache started
   service:
-    name: httpd
-    state: started
-    enabled: true
+    name= httpd
+    state= restarted
+    enabled= true
  
