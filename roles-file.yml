@@ -3,5 +3,4 @@
   remote_user: root
   roles:
     - ec2-spin-up
-    - apache-server
-    - tomcat-server
+
